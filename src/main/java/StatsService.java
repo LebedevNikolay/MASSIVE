@@ -12,7 +12,7 @@ public class StatsService {
         return sum;
     }
 
-    public long AverageSales(long[] sales) { // средняя сумма продаж
+    public long averageSales(long[] sales) { // средняя сумма продаж
         long average = sumSales(sales) / sales.length;
 
         return average;
@@ -41,8 +41,8 @@ public class StatsService {
         return minMonth + 1;
     }
 
-    public int AboveAverageSales(long[] sales) { //количество месяцев с продажами выше среднего
-        long average = AverageSales(sales);
+    public int aboveAverageSales(long[] sales) { //количество месяцев с продажами выше среднего
+        long average = averageSales(sales);
         int counter = 0;
 
         for (long sum : sales) {
@@ -53,8 +53,8 @@ public class StatsService {
         return counter;
     }
 
-    public int BelowAverageSales(long[] sales) { // количество месяцев с продажами ниже среднего
-        long average = AverageSales(sales);
+    public int belowAverageSales(long[] sales) { // количество месяцев с продажами ниже среднего
+        long average = averageSales(sales);
         int counter = 0;
 
         for (long sum : sales) {
